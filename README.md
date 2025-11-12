@@ -72,7 +72,7 @@ If you have an Apple Developer ID, you can sign and notarize the app to remove a
 
 If you’d like to modify or build the app yourself:
 
-``bash
+```bash
 # Clone repo
 git clone https://github.com/yourusername/running-cat.git
 cd running-cat
