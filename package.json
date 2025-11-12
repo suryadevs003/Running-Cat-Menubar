@@ -1,0 +1,58 @@
+{
+  "name": "running-cat-menubar",
+  "version": "1.0.0",
+  "description": "A small menu bar app that shows an animated running cat",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --mac"   
+  },
+  "keywords": [],
+  "author": "SuryaDev Singh",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
+    "electron-positioner": "^4.1.0",
+    "menubar": "^9.5.2"
+  },
+  "build": {
+    "appId": "com.suryadev.runningcat",
+    "asarUnpack": [
+      "assets"
+    ],
+    "productName": "Running Cat",
+    "files": [
+      "main.js",
+      "index.html",
+      "preload.js",
+      "styles/**/*",
+      "assets/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "hardenedRuntime": false,
+      "identity": null,
+      "target": [
+        "dmg","zip"
+      ],
+      "icon": "assets/icon_cat.icns"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon_cat.ico"
+    },
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "electron": "^34.5.8",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.13"
+  }
+}
